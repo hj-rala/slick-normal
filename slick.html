@@ -1,0 +1,61 @@
+css-------
+
+.slick-dots {position: absolute;bottom: -36px;left: 0;width: 100%;text-align: center;}
+.slick-dots:after {content:""; display:block; clear:both;}
+.slick-dots button {display: none;}
+.slick-dots li {display: inline-block;width: 16px;height: 16px;border-radius: 50%;border: 3px solid #abafb2;margin: 0 12px;cursor: pointer; box-sizing:border-box; -webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-ms-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
+.slick-dots li.slick-active {border-color: #1b1b1d;background:#1b1b1d;}
+
+.dLeft {position: absolute;top: 50%;left: 0;margin-top: -24px;}
+.dRight {position: absolute;top: 50%;right: 0;margin-top: -24px;}
+
+
+
+
+
+
+js-------
+
+//mainslide
+var mainSlide = function(){
+	$slickElement = $('#mainSlide');
+	$slickElement.slick({
+		infinite: true,
+		variableWidth: false,
+		swipeToSlide: true,
+		dots: true,
+		prevArrow: $('.dLeft'),
+		nextArrow: $('.dRight'),
+		slidesToShow: 4,
+		responsive: [
+			{
+			  breakpoint: 1140,
+			  settings: {
+				arrows: true,
+				slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 940,
+			  settings: {
+				arrows: true,
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 540,
+			  settings: {
+				arrows: true,
+				slidesToShow: 1
+				}
+			}
+		]
+	});
+}; mainSlide();
+
+
+
+
+
+
+
